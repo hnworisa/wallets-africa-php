@@ -1,0 +1,40 @@
+{
+    "name": "remeni/wallets-africa-php",
+	"version": "1.0.0",
+	"keywords": [
+		"api",
+		"bvn", 
+		"wallet", 
+		"airtime",
+		"bank transfer",
+		"wallets africa"
+	],
+    "description": "A PHP API wrapper for Wallets Africa (https://wallets.africa).",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Chinemerem Nworisa",
+            "email": "hnworisa@gmail.com",
+            "role": "Developer"
+        }
+    ],
+	"minimum-stability": "stable",
+    "require": {
+        "php": "^7.0",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.5"
+    },
+    "require-dev": {
+		"phpunit/phpunit": "6.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Remeni\\WalletsAfrica\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Remeni\\WalletsAfrica\\Tests\\": "tests/"
+        }
+    }
+}
