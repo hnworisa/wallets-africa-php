@@ -2,7 +2,7 @@
 A PHP wrapper for the Wallets Africa API
 
 ## Installation
-Install the library using Composer. Please read the [Composer Documentation](https://getcomposer.org/doc/01-basic-uage.md) if you're unfamiliar with Composer or dependency managers in general.
+Install the library using Composer. Please read the [Composer Documentation](https://getcomposer.org/doc/01-basic-usage.md) if you're unfamiliar with Composer or dependency managers in general.
 
 ```bash
 composer require remeni/wallets-africa-php
@@ -38,4 +38,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-The MIT License (MIT). Please see [License File](https://github.com/remeni/wallets-africa-php/blob/master/LICENSE.md) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/remeni/wallets-africa-php/blob/master/LICENSE) for more information.
