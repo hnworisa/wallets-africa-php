@@ -9,7 +9,7 @@
 		"bank transfer",
 		"wallets africa"
 	],
-    "description": "A PHP API wrapper for Wallets Africa (https://wallets.africa).",
+    "description": "A PHP wrapper for the Wallets Africa API.",
     "license": "MIT",
     "authors": [
         {
@@ -20,9 +20,9 @@
     ],
 	"minimum-stability": "stable",
     "require": {
-        "php": "^7.0",
+        "php": ">=7.2",
         "ext-json": "*",
-        "guzzlehttp/guzzle": "^6.5"
+        "guzzlehttp/guzzle": "7.0"
     },
     "require-dev": {
 		"phpunit/phpunit": "6.*"

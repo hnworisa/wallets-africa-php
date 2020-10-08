@@ -16,7 +16,7 @@ namespace Remeni\WalletsAfrica;
 use InvalidArgumentException;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\RequestException;
+use GuzzleHttp\Exception\TransferException;
 use Remeni\WalletsAfrica\Configuration;
 use Remeni\WalletsAfrica\ApiException;
 
@@ -89,7 +89,7 @@ abstract class Request
         try {
             $response = $this->httpClient->request($method, $url, $options);
             $resp = json_decode($response->getBody()->getContents(), true);
-        } catch (RequestException $e) {
+        } catch (TransferException $e) {
             throw new ApiException(
                 "[{$e->getCode()}] {$e->getMessage()}",
                 $e->getCode(),
