@@ -25,9 +25,8 @@ $configuration = new Configuration([
 $client = new WalletsAfrica($configuration);
 
 try {
-    $resolveBvn = $WalletsAfrica->identity->resolveBvnDetails('22231485915');
-
-    print_r($resolveBvn);
+    $balance = $client->account->checkBalance();
+    print_r($balance);
 } catch (ApiException $e) {
     echo $e->getMessage();
 }
@@ -39,4 +38,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[MIT](https://choosealicense.com/licenses/mit/)
+The MIT License (MIT). Please see [License File](https://github.com/remeni/wallets-africa-php/blob/master/LICENSE.md) for more information.
