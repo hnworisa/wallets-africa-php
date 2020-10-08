@@ -88,7 +88,6 @@ abstract class Request
         
         try {
             $response = $this->httpClient->request($method, $url, $options);
-            $resp = json_decode($response->getBody()->getContents(), true);
         } catch (TransferException $e) {
             throw new ApiException(
                 "[{$e->getCode()}] {$e->getMessage()}",
@@ -113,7 +112,7 @@ abstract class Request
             );
         }
 
-        return $resp;
+        return $response;
     }
 
     /**
