@@ -16,7 +16,8 @@ namespace Remeni\WalletsAfrica;
 use InvalidArgumentException;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use GuzzleHttp\Exception\TransferException;
+use GuzzleHttp\Exception\ConnectException;
+use GuzzleHttp\Exception\RequestException;
 use Remeni\WalletsAfrica\Configuration;
 use Remeni\WalletsAfrica\ApiException;
 
@@ -119,7 +120,7 @@ abstract class Request
             );
         }
 
-        return json_decode($response->getBody->getContents(), TRUE);
+        return json_decode($response->getBody()->getContents(), TRUE);
     }
 
     /**
