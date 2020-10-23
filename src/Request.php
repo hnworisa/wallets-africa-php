@@ -88,12 +88,19 @@ abstract class Request
         
         try {
             $response = $this->httpClient->request($method, $url, $options);
-        } catch (TransferException $e) {
+        } catch (ConnectException $e) {
             throw new ApiException(
                 "[{$e->getCode()}] {$e->getMessage()}",
                 $e->getCode(),
-                $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                null,
+                null
+            );
+        } catch (RequestException $e) {
+            throw new ApiException(
+                "[{$e->getCode()}] {$e->getMessage()}",
+                $e->getCode(),
+                $e->hasResponse() ? $e->getResponse()->getHeaders() : null,
+                $e->hasResponse() ? $e->getResponse()->getBody()->getContents() : null
             );
         }
         
