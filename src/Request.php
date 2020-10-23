@@ -119,7 +119,7 @@ abstract class Request
             );
         }
 
-        return $response;
+        return json_decode($response->getBody->getContents(), TRUE);
     }
 
     /**
